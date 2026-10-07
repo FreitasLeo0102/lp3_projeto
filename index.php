@@ -33,7 +33,11 @@ $rotas = [
     '/categorias' => ['controller' => 'CategoriaController', 'metodo' => 'index'],
     '/categorias/adicionar' => ['controller' => 'CategoriaController', 'metodo' => 'adicionar'],
     '/categorias/editar' => ['controller' => 'CategoriaController', 'metodo' => 'editar'],
-    '/categorias/excluir' => ['controller' => 'CategoriaController', 'metodo' => 'excluir',]
+    '/categorias/excluir' => ['controller' => 'CategoriaController', 'metodo' => 'excluir'],
+    '/produtos' => ['controller' => 'ProdutoController', 'metodo' => 'index'],
+    '/produtos/adicionar' => ['controller' => 'ProdutoController', 'metodo' => 'adicionar'],
+    '/produtos/editar' => ['controller' => 'ProdutoController', 'metodo' => 'editar'],
+    '/produtos/excluir' => ['controller' => 'ProdutoController', 'metodo' => 'excluir',]
 ];
 
 // Verificação de existência da rota
