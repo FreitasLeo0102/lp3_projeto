@@ -10,6 +10,7 @@
             <li><a href="/lp3_projeto/categorias">Categorias</a></li>
             <li><a href="/lp3_projeto/produtos">Produtos</a></li>
             <li><a href="/lp3_projeto/clientes">Clientes</a></li>
+            <li><a href="/lp3_projeto/filmes">Filmes</a></li>
         </ul>
     </nav>
 </aside>
