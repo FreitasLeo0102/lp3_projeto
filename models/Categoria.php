@@ -13,7 +13,7 @@ class Categoria
 
     public function listar()
     {
-        $stmt = $this->db->query("SELECT * FROM $this->table ORDER BY id DESC");
+        $stmt = $this->db->query("SELECT * FROM $this->table ORDER BY categoria ASC");
         return $stmt->fetchAll();
     }
 

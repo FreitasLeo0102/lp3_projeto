@@ -17,25 +17,27 @@ class Produto
         return $stmt->fetchAll();
     }
 
-    public function salvar(string $produto, float $valor, string $descricao)
+    public function salvar(string $produto, float $valor, int $categoria_id, string $descricao)
     {
-        $sql = "INSERT INTO $this->table (produto, valor, descricao) VALUES (:produto, :valor, :descricao)";
+        $sql = "INSERT INTO $this->table (produto, valor, categoria_id, descricao) VALUES (:produto, :valor, :categoria_id, :descricao)";
         $stmt = $this->db->prepare($sql);
         $values = [
             ':produto' => $produto,
             ':valor' => $valor,
+            ':categoria_id' => $categoria_id,
             ':descricao' => $descricao
         ];
         return $stmt->execute($values);
     }
 
-    public function atualizar(int $id, string $produto, float $valor, string $descricao)
+    public function atualizar(int $id, string $produto, float $valor, int $categoria_id, string $descricao)
     {
-        $sql = "UPDATE $this->table SET produto = :produto, valor = :valor, descricao = :descricao WHERE id = :id";
+        $sql = "UPDATE $this->table SET produto = :produto, valor = :valor, categoria_id = :categoria_id, descricao = :descricao WHERE id = :id";
         $stmt = $this->db->prepare($sql);
         $values = [
             ':produto' => $produto,
             ':valor' => $valor,
+            ':categoria_id' => $categoria_id,
             ':descricao' => $descricao,
             ':id' => $id
         ];

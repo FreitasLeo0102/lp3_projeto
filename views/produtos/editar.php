@@ -20,6 +20,16 @@
             </div>
 
             <div class="form-group">
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria" required class="form-select">
+                    <option value="">Selecione uma categoria</option>
+                    <?php foreach ($categorias as $categoria) { ?>
+                        <option <?= $dado['categoria_id'] == $categoria['id'] ? 'selected' : '' ?> value="<?= $categoria['id'] ?>"><?= htmlspecialchars($categoria['categoria']) ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="descricao">Descrição:</label>
                 <textarea id="descricao" name="descricao" required class="form-control"><?= htmlspecialchars($dado['descricao']) ?></textarea>
             </div>
